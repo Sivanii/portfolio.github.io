@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f791f96e42.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div id="header">
+    <div class="container">
+        <nav>
+            
+            <ul id="sidemenu">
+                <li><a href="#header">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#hobbies">HOBBIES</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                
+            </ul>
+            
+        </nav>
+        <div class="header-text">
+            <p>B.TECH STUDENT</p>
+            <h1>Hello,I am <span>Sivani</span></h1>
+        </div>
+    </div>
+   </div>
+   <!-----------about--------->
+   <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="image/1.jpeg" >
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About me</h1>
+                <p>currently pursuing my b.tech in Shri Vishnu Engineering College for Womens in the branch of Artifical Intelligence and Data Science
+                    I have good interpersonal skills, am an excellent team worker and am keen and very willing to learn and develop new skills. I am reliable and dependable and often seek new responsibilities within a wide range of employment areas. I have an active and dynamic approach to work and getting things done.
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('project')">Project</p>
+                    <p class="tab-links " onclick="opentab('education')">Education</p>
+
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>HTML,CSS,JS</span><br>Front End Development</li>
+                        <li><span> C,PYTHON,JAVA</span><br>Basic Coding</li>
+                        <li><span>Basic of Data Science</span><br>analysing the data</li>
+                        
+                    </ul>
+                </div>
+                <div class="tab-contents" id="project">
+                    <ul>
+                        <li><span>Machine learning Project</span><br>Kidney Disease Prediction</li>
+                        <li><span>Css Project</span><br>Personal Portfolio </li>
+                    
+                        
+                    </ul>
+                </div>
+                
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Secondary Education - 2019</span><br>Narayana EM School</li>
+                        <li><span> Inter 2019-2021</span><br>Narayana Junior College</li>
+                        <li><span>B.Tech 2021-2025</span><br>Shri Vishnu Engineering College</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div> 
+   <!- -------Hobbies ------- ->
+   <div id="hobbies">
+    <div class="container">
+        <h1 class="sub-title">My Hobbies</h1>
+        <div class="hobbies-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>programming</h2>
+                <p>I was intersected in coding and problem solving frequently </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-palette"></i>
+                <h2>Drawing</h2>
+                <p>In free time I used to draw and design the cloths and remodelling my old clothes is my favourite hobby</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-video"></i>
+                <h2>Watching Movie</h2>
+                <p>Watching the movie is my favourite part in my life. It make me feel relaxing </p>
+                <a href="#">Learn more</a>
+            </div>
+
+        </div>
+
+    </div>
+   </div>
+   <!-----------contact------------->
+   <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>nukalasivani@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>9849198313</p>
+                <div class="social-icon">
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                
+                    <a href="image/NAGA's Resume (1).pdf" download="image/NAGA's Resume (1).pdf" class="btn btn2">Download CV</a>
+
+            </div>
+
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright @ Sivani made with <i class="fa-solid fa-heart"></i> with tutorial </p>
+    </div>
+   </div>
+   
+
+   <script>
+          var tablinks = document.getElementsByClassName("tab-links");
+          var tabcontents = document.getElementsByClassName("tab-contents"); 
+                 function opentab(tabname){
+                    for(tablink of tablinks){
+                          tablink.classList.remove("active-link");
+                        }
+                    for(tabcontent of tabcontents){
+                         tabcontent.classList.remove("active-tab");
+                        }
+                        event.currentTarget.classList.add("active-link");
+                        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+   </script>
+   <script>
+
+    var sidemen = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemen.style.right = "0";
+    }
+    function closemenu(){
+        sidemen.style.right = "-200px";
+    }
+   </script>
+   <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw1jhn1I0E6mjyOnMkSzgsyv4cUii4ciQe6yNcXdAGUHjafkvrymviNV545dEXmKMxbGA/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg =  document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Thanks for your Response"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+    
+</body>
+</html>
